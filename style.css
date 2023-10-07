@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --color-brands: #d90368;
+  --font-base: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+}
+
+header {
+  min-height: 10vh;
+}
+
+footer {
+  min-height: 10vh;
+}
+
+main {
+  min-height: 80vh;
+}
+
+.color-button {
+  background-color: var(--color-brands);
+}
+
+.navbar-image {
+  max-width: 15.6rem;
+  max-height: 3.2rem;
+}
+
+.nav-color {
+  background-color: var(--color-brands);
+  padding: 0.2rem 1.8rem;
+}
+
+.carousel-title {
+  letter-spacing: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner-image {
+  max-height: 37vh;
+  object-fit: cover;
+}
+
+.lupa-search {
+  width: 1rem;
+  height: 1rem;
+}
+
+.card-items {
+  width: 22rem;
+}
+
+/* CONTACT */
+.contact__container{
+  background-color: var(--color-brands);
+}
+
+/* FOOTER */
+.footer {
+  color: var(--color-brands);
+}
+
+.footer__icons {
+  color: var(--color-brands);
+  font-size: 2rem;
+}
+
+.autor {
+  font-size: 0.8rem;
+}
+
+.size-image {
+  max-height: 24rem;
+  object-fit: cover;
+}
