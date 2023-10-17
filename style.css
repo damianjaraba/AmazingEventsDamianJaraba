@@ -55,26 +55,46 @@ main {
   height: 1rem;
 }
 
-.card-body{
-display: flex;
-flex-direction: column;
-justify-content: space-between ;
-  }
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-.card-img-top{
-  min-height: 25vh;
+.card-img-top {
+  height: 25vh;
   object-fit: cover;
 }
 .card-items {
-  width: 22rem;
+  width: 18rem;
+  background-image: radial-gradient(
+    circle at 50% -20.71%,
+    #ffe6c5 0,
+    #ffe7c3 6.25%,
+    #fce9c3 12.5%,
+    #f7ebc3 18.75%,
+    #f1ecc3 25%,
+    #ebeec5 31.25%,
+    #e6efc7 37.5%,
+    #e0f1ca 43.75%,
+    #daf2cd 50%,
+    #d4f3d1 56.25%,
+    #cff4d5 62.5%,
+    #c9f5da 68.75%,
+    #c5f6df 75%,
+    #c0f6e4 81.25%,
+    #bcf6e9 87.5%,
+    #b9f7ee 93.75%,
+    #b7f7f3 100%
+  );
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: var(--color-brands);
   border: none;
 }
 /* CONTACT */
-.contact__container{
+.contact__container {
   background-color: var(--color-brands);
 }
 
