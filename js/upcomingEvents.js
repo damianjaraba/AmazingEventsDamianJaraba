@@ -1,4 +1,11 @@
 const arrayEvents = data.events;
+const currentDate = data.currentDate;
+const arrayUpcomingEvents = [];
+for (let event of arrayEvents) {
+  if (event.date > currentDate) {
+    arrayUpcomingEvents.push(event);
+  }
+}
 
 const containerCards = document.getElementById("container__cards");
 
@@ -20,4 +27,4 @@ function createCard(arrayEvent) {
     containerCards.appendChild(card);
   }
 }
-createCard(arrayEvents);
+createCard(arrayUpcomingEvents);
