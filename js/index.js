@@ -13,7 +13,7 @@ function createCard(arrayEvent) {
     <p class="card-text">${event.description}</p>
     <div class="d-flex justify-content-between align-items-center">
     <p class="m-0"><strong>Price:</strong> $ ${event.price}</p>
-    <a href="/pages/details.html" class="btn btn-primary"><strong>Details</strong></a>
+    <a href="./pages/details.html?=_id${event._id}" class="btn btn-primary"><strong>Details</strong></a>
     </div>
     </div>`;
 
