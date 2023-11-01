@@ -1,3 +1,5 @@
+import {data} from "../modules/data.js"
+
 const arrayEvents = data.events;
 const currentDate = data.currentDate;
 

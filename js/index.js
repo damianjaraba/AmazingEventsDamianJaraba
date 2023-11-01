@@ -1,4 +1,4 @@
-import {data} from "../modules/data"
+import { data } from "../modules/data.js";
 
 const arrayEvents = data.events;
 const currentDate = data.currentDate;
@@ -57,7 +57,7 @@ function createCard(arrayEvent) {
   `;
   } else {
     containerCards.innerHTML = "";
-
+    let statusEvent;
     for (const event of arrayEvent) {
       if (event.date < currentDate) {
         statusEvent = "Past Events";
