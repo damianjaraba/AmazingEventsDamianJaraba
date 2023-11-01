@@ -1,3 +1,5 @@
+import {data} from "../modules/data"
+
 const arrayEvents = data.events;
 const currentDate = data.currentDate;
 const containerCheckBox = document.getElementById("containerCheckBox");
