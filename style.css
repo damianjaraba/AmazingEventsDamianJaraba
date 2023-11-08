@@ -41,12 +41,12 @@ main {
 }
 
 .carousel-title {
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .banner-image {
-  max-height: 37vh;
+  max-height: 25vh;
   object-fit: cover;
 }
 

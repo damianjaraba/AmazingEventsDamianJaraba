@@ -1,10 +1,9 @@
-import {data} from "../modules/data.js"
+import {$arrayEvents} from "../modules/functions.js"
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-const arrayEvents = data.events;
-let detailsCard = arrayEvents.find((event) => event._id === id);
+let detailsCard = $arrayEvents.find((event) => event._id === id);
 
 // Función que genera las Cards de DETAILS
 const containerDetails = document.getElementById("containerDetails");
