@@ -1,29 +1,27 @@
 import {
-  category,
+  urlApi,
   filterCategory,
-  $arrayEvents,
-  $currentDate,
-  createCard,
+  category,
+  createCardDetail,
   superFilter,
 } from "../modules/functions.js";
 
-const $arrayUpcomingEvents = [];
+fetch(urlApi)
+  .then((res) => res.json())
+  .then((data) => {
+    const $arrayEvents = data.events;
+    const $currentDate = data.currentDate;
 
-for (let event of $arrayEvents) {
-  if (event.date > $currentDate) {
-    $arrayUpcomingEvents.push(event);
-  }
-}
+    const $arrayUpcomingEvents = [];
 
-function preventRefresh($arrayEvents) {
-  $arrayEvents.preventDefault();
-}
+    for (let event of $arrayEvents) {
+      if (Date.parse(event.date) > Date.parse($currentDate)) {
+        $arrayUpcomingEvents.push(event);
+      }
+    }
 
-//Array para guardar las categorias
-category();
-
-filterCategory($arrayEvents);
-// Función que genera las Cards de UPCOMING EVENTS
-createCard($arrayUpcomingEvents);
-
-superFilter($arrayUpcomingEvents);
+    category($arrayUpcomingEvents);
+    filterCategory($arrayUpcomingEvents);
+    superFilter($arrayUpcomingEvents);
+    createCardDetail($arrayUpcomingEvents, $currentDate);
+  });

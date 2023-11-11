@@ -1,23 +1,23 @@
-let urlApi = "https://mindhub-xj03.onrender.com/api/amazing";
-
 import {
-  $arrayEvents,
+  urlApi,
   filterCategory,
   category,
   createCard,
   superFilter,
 } from "../modules/functions.js";
 
-category();
-
-filterCategory($arrayEvents);
-
-superFilter($arrayEvents);
-
-createCard($arrayEvents);
-
 fetch(urlApi)
   .then((res) => res.json())
   .then((data) => {
-    
+    const $arrayEvents = data.events;
+    const $currentDate = data.currentDate;
+
+
+    category($arrayEvents);
+
+    filterCategory($arrayEvents);
+
+    superFilter($arrayEvents);
+
+    createCard($arrayEvents, $currentDate);
   });

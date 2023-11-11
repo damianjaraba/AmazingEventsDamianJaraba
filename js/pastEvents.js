@@ -1,20 +1,27 @@
 import {
-  category,
+  urlApi,
   filterCategory,
-  $arrayEvents,
-  $currentDate,
-  createCard,
+  category,
+  createCardDetail,
   superFilter,
 } from "../modules/functions.js";
 
-const $pastEvents = [];
-for (let event of $arrayEvents) {
-  if (event.date < $currentDate) {
-    $pastEvents.push(event);
-  }
-}
+fetch(urlApi)
+  .then((res) => res.json())
+  .then((data) => {
+    const $arrayEvents = data.events;
+    const $currentDate = data.currentDate;
 
-category();
-filterCategory($arrayEvents);
-createCard($pastEvents);
-superFilter($pastEvents);
+    const $pastEvents = [];
+
+    for (let event of $arrayEvents) {
+      if (Date.parse(event.date) < Date.parse($currentDate)) {
+        $pastEvents.push(event);
+      }
+    }
+
+    category($pastEvents);
+    filterCategory($pastEvents);
+    superFilter($pastEvents);
+    createCardDetail($pastEvents, $currentDate);
+  });
